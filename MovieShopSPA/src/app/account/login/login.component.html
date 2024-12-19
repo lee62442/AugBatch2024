@@ -1,1 +1,29 @@
-<p>login works!</p>
+<h1>Login</h1>
+<!-- Use Template Driven Approach-->
+<!-- ngModel directive is the one we use that uses FormControl behind the scene -->
+<hr />
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <form (ngSubmit)="loginSubmit(loginForm)" #loginForm="ngForm">
+            <div class="text-danger"></div>
+            <div class="form-group">
+                <label class="control-label">Email</label>
+                <input class="form-control" name="email" [(ngModel)]="userLogin.email" /> 
+                <!-- [()] -> banana in the box -->
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Password</label>
+                <input class="form-control" name="password" [(ngModel)]="userLogin.password" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Two-way Binding -->
+
+
